@@ -110,3 +110,27 @@ export declare class Queue extends CustomEvent {
    */
   on (name: 'enqueue' | 'dequeue', fn: Function, scope?: Object): Function
 }
+
+/**
+ * 数据结构 图（无向图）
+ */
+export declare class Graph extends CustomEvent {
+  addVertex (v: any): boolean
+  addEdge (v1: any, v2: any): void
+  toString () : string
+}
+
+/**
+ * 数据结构 无向图
+ */
+export declare class GraphDirected extends Graph {
+  addEdge (vFrom: any, vTo: any): void
+}
+
+/**
+ * 广度优先（BFS）：图遍历算法
+ * @param graph 图
+ * @param startVertex 起算顶点
+ * @param callback 被遍历到的顶点处理函数
+ */
+export declare function breadthFirstSearch (graph: Graph, startVertex: any, callback: Function) : any[]
