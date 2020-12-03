@@ -117,6 +117,8 @@ export declare class Queue extends CustomEvent {
 export declare class Graph extends CustomEvent {
   addVertex (v: any): boolean
   addEdge (v1: any, v2: any): void
+  getVertices () : Array<any>
+  getAdjacencyList () : Map<any, any>
   toString () : string
 }
 
@@ -132,5 +134,16 @@ export declare class GraphDirected extends Graph {
  * @param graph 图
  * @param startVertex 起算顶点
  * @param callback 被遍历到的顶点处理函数
+ * @returns 遍历结点数组
  */
-export declare function breadthFirstSearch (graph: Graph, startVertex: any, callback: Function) : any[]
+export declare function breadthFirstSearch (graph: Graph, startVertex: any, callback: (val: string) => void) : any[]
+
+/**
+ * 广度优先（BFS）：图：寻找最短路径
+ * @param graph 图
+ * @param startVertex 起算顶点
+ * @returns 最短路径分析结果
+ */
+export declare function breadthFirstSearchV2 (graph: Graph, startVertex: any) : { distances: any, predecessors: any }
+
+
