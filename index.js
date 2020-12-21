@@ -1,4 +1,5 @@
 export * from './stack/stack'
 export * from './queue/queue'
 export * from './graph/graph'
+export * from './linkedlist/linkedlist'
 export * from './utils'

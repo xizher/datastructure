@@ -1,9 +1,7 @@
-import { CustomEvent } from '../customevent'
-
 /**
  * 数据结构：栈
  */
-export declare class Stack extends CustomEvent {
+export declare class Stack {
   /**
    * 入栈
    * @param item 入栈元素
@@ -56,7 +54,7 @@ export declare class Stack extends CustomEvent {
 /**
  * 数据结构 队列
  */
-export declare class Queue extends CustomEvent {
+export declare class Queue {
   /**
    * 入队
    * @param item 入队元素
@@ -114,7 +112,7 @@ export declare class Queue extends CustomEvent {
 /**
  * 数据结构 图（无向图）
  */
-export declare class Graph extends CustomEvent {
+export declare class Graph {
   addVertex (v: any): boolean
   addEdge (v1: any, v2: any): void
   getVertices () : Array<any>
@@ -146,4 +144,23 @@ export declare function breadthFirstSearch (graph: Graph, startVertex: any, call
  */
 export declare function breadthFirstSearchV2 (graph: Graph, startVertex: any) : { distances: any, predecessors: any }
 
+export declare class Node {
+  value: any
+  next: Node
+}
 
+/**
+ * 链表
+ */
+export declare class LinkedList {
+  append (value: any) : this
+  insert (index, value)
+  removeAt (index)
+  remove (value)
+  indexOf (value)
+  getAt (index: number) : Node
+  isEmpty ()
+  size ()
+  toString ()
+  toArray () : Array<any>
+}
